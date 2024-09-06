@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylecartaz.css">
+    <title>Espetáculos de Teatro</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <img src="C:\Users\janto\OneDrive\Documents\Estudos\TADB1\brunomars.png" alt="brunomars">
+                <img src="C:\Users\janto\OneDrive\Documents\Estudos\TADB1\epicbanner.png" alt="epic">
+                <img src="C:\Users\janto\OneDrive\Documents\Estudos\TADB1\ovendedordesonhos.jpg" alt="moulinrogue">
+            </div>
+            <div class="carousel-control">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+        <div class="showcase">
+            <h1>Próximos Espetáculos</h1>
+            <p>Confira os próximos espetáculos imperdíveis do nosso teatro! Prepare-se para uma experiência inesquecível com performances de alta qualidade.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-inner img');
+            const totalSlides = slides.length;
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+            const newTransformValue = -currentIndex * 100;
+            document.querySelector('.carousel-inner').style.transform = `translateX(${newTransformValue}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
