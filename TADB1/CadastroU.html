@@ -47,6 +47,12 @@
     </div>
 
     <script>
+    const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvd2prdm5sdHNtdnloaG1kcGx5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDcxNTIxMiwiZXhwIjoyMDQwMjkxMjEyfQ.DLD5qvSgJi97UxQW_-YGmRO1BkP_0hiA7qYiUQ3GSRY"
+    const SUPABASE_URL = "https://towjkvnltsmvyhhmdply.supabase.co"
+    const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY);
+
+    //postgresql:postgres.towjkvnltsmvyhhmdply:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvd2prdm5sdHNtdnloaG1kcGx5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNDcxNTIxMiwiZXhwIjoyMDQwMjkxMjEyfQ.DLD5qvSgJi97UxQW_-YGmRO1BkP_0hiA7qYiUQ3GSRY"@aws-0-sa-east-1.pooler.supabase.com:6543/postgres
+
         function validatePasswords() {
             var senha = document.getElementById('senha').value;
             var senha2 = document.getElementById('senha2').value;

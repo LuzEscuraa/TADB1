@@ -55,3 +55,18 @@ body {
     font-size: 18px;
     color: #666;
 }
+.compra{
+    font: italic 1.2rem "Fira Sans", serif;
+    font-size: 25px ;
+    text-align: center;
+    position: center;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.compra img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
